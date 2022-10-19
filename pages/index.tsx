@@ -1,10 +1,11 @@
 import Layout from '@/components/Layout'
 import type { NextPage } from 'next'
+import Button from '@/components/Button/Button'
 
 const Home: NextPage = () => {
   return (
     <Layout>
-      <h1 className="text-sm md:text-xl lg:text-3xl">Hello World</h1>
+      <Button label="My Button" />
     </Layout>
   )
 }
