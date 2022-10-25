@@ -6,7 +6,18 @@ module.exports = {
     './stories/**/*.{ts,tsx}',
   ],
   theme: {
-    extend: {},
+    container: {
+      padding: '5rem',
+    },
+    extend: {
+      keyframes: {
+        shimmer: {
+          '100%': {
+            transform: 'translateX(100%)',
+          },
+        },
+      },
+    },
     debugScreens: {
       position: ['bottom', 'right'],
       style: {
