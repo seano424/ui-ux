@@ -6,7 +6,7 @@ import Skeleton from '@/components/Skeleton/Skeleton'
 const Home: NextPage = () => {
   return (
     <Layout>
-      <article className="container py-10 space-y-10 bg-black">
+      <article className="container space-y-10 py-10">
         <Button label="My Button" />
         <Skeleton />
       </article>
