@@ -2,6 +2,7 @@ import { useAtom } from 'jotai'
 import { mobileMenuAtom } from '@/atoms/mobileMenuAtom'
 import MobileMenu from './MobileMenu'
 import Overlay from './Overlay'
+import Image from 'next/image'
 
 const links = [
   {
@@ -31,7 +32,7 @@ const Header = () => {
   return (
     <nav className="container flex items-center justify-between py-4">
       <a href="/">
-        <img src="/images/logo.svg" alt="Logo" />
+        <Image alt="Logo" src="/images/logo.svg" height={60} width={60} />
       </a>
       <ul className="hidden space-x-5 lg:flex">
         {links.map((link) => (
@@ -50,9 +51,19 @@ const Header = () => {
         onClick={() => setIsOpen((prev) => !prev)}
       >
         {isOpen ? (
-          <img src="/images/icon-menu-close.svg" alt="Logo" />
+          <Image
+            alt="Menu Close"
+            src="/images/icon-menu-close.svg"
+            height={25}
+            width={25}
+          />
         ) : (
-          <img src="/images/icon-menu.svg" alt="Logo" />
+          <Image
+            alt="Menu Open"
+            src="/images/icon-menu.svg"
+            height={35}
+            width={35}
+          />
         )}
       </button>
 
