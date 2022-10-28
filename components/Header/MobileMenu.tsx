@@ -1,5 +1,5 @@
-import { useAtom } from 'jotai'
 import clsx from 'clsx'
+import { useAtom } from 'jotai'
 import { mobileMenuAtom } from '@/atoms/mobileMenuAtom'
 
 const links = [
@@ -27,10 +27,11 @@ const links = [
 
 function MobileMenu(): JSX.Element {
   const [isOpen] = useAtom(mobileMenuAtom)
+
   return (
     <div
       className={clsx(
-        'fixed inset-y-0 left-1/3 right-0 z-40 transform bg-white transition-all duration-500 ease-linear',
+        'fixed inset-y-0 left-1/3 right-0 z-40 transform bg-white transition-all duration-500 ease-linear lg:hidden',
         isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-70'
       )}
     >

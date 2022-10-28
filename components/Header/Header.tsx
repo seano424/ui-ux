@@ -1,3 +1,4 @@
+import { useRef } from 'react'
 import { useAtom } from 'jotai'
 import { mobileMenuAtom } from '@/atoms/mobileMenuAtom'
 import MobileMenu from './MobileMenu'
@@ -29,6 +30,7 @@ const links = [
 
 const Header = () => {
   const [isOpen, setIsOpen] = useAtom(mobileMenuAtom)
+
   return (
     <nav className="container flex items-center justify-between py-4">
       <a href="/">
@@ -66,9 +68,8 @@ const Header = () => {
           />
         )}
       </button>
-
-      <MobileMenu />
       <Overlay />
+      <MobileMenu />
     </nav>
   )
 }
