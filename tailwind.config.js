@@ -20,7 +20,7 @@ module.exports = {
       },
     },
     debugScreens: {
-      position: ['bottom', 'right'],
+      position: ['bottom', 'left'],
       style: {
         backgroundColor: '#262626e6',
         borderRadius: '4px',
