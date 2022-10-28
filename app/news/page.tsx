@@ -12,14 +12,14 @@ import Tooltip from '@/components/Tooltip/Tooltip'
 export default function AboutPage() {
   return (
     <>
-      <Tooltip message="Hello world!" position="bottom" />
+      <Tooltip message="Hello world!" position="top" />
       <Header />
       <div className="container space-y-10 py-10">
         <Link href="/news/test">
           <Button label="Test Page" />
         </Link>
         <Skeleton />
-        <div className='h-[500px] border'></div>
+        <div className='h-[500px] border w-full'></div>
       </div>
     </>
   )
